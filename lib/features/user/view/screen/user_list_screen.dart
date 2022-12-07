@@ -17,7 +17,7 @@ import '../../controller/user_controller.dart';
 import '../../data/model/user.dart';
 import '../widget/status_container.dart';
 
-enum UserOperation { edit, delete, post, todo }
+enum UserOperation { editar, borrar, publicar, tarea }
 
 class UserListScreen extends StatefulWidget {
   const UserListScreen({Key? key}) : super(key: key);
@@ -122,16 +122,16 @@ class _UserListScreenState extends State<UserListScreen> {
             items: UserOperation.values,
             onChanged: (UserOperation value) async {
               switch (value) {
-                case UserOperation.post:
+                case UserOperation.publicar:
                   navigateTo(PostListScreen(user: user));
                   break;
-                case UserOperation.todo:
+                case UserOperation.tarea:
                   navigateTo(ToDoListScreen(user: user));
                   break;
-                case UserOperation.delete:
+                case UserOperation.borrar:
                   deleteUser(user);
                   break;
-                case UserOperation.edit:
+                case UserOperation.editar:
                   editUser(user);
               }
             },
