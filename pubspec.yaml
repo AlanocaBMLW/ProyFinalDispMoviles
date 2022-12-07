@@ -1,0 +1,53 @@
+name: layered_architecture
+description: A new Flutter project.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.18.2 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  dio: ^4.0.6
+  get: ^4.6.5
+  logger: ^1.1.0
+  json_annotation: ^4.7.0
+  dartz: ^0.10.1
+  flutter_spinkit: ^5.1.0
+  intl: ^0.17.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+  build_runner: ^2.3.2
+  json_serializable: ^6.5.4
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - asset/images/
+
+
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: asset/fonts/Roboto-Black.ttf
+          weight: 900
+        - asset: asset/fonts/Roboto-Bold.ttf
+          weight: 700
+        - asset: asset/fonts/Roboto-Light.ttf
+          weight: 300
+        - asset: asset/fonts/Roboto-Medium.ttf
+          weight: 500
+        - asset: asset/fonts/Roboto-Regular.ttf
+          weight: 400
+        - asset: asset/fonts/Roboto-Thin.ttf
+          weight: 100
